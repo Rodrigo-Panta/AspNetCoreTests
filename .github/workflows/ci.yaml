@@ -11,6 +11,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    defaults:
+          run:
+            working-directory: AspNetCoreTests
+
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
@@ -18,7 +22,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore ./AspNetCoreTests/AspNetCoreTests.sln
+      run: dotnet restore 
     - name: Build
       run: dotnet build --no-restore
     - name: Test
