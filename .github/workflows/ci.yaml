@@ -17,9 +17,8 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-    - run: cd AspNetCoreTests/AspNetCoreTests
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./AspNetCoreTests/AspNetCoreTests.sln
     - name: Build
       run: dotnet build --no-restore
     - name: Test
