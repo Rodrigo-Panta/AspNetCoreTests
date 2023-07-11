@@ -23,7 +23,7 @@ namespace AspNetCoreTests.Web.Controllers
             return View(customers);
         }
 
-        public async Task<IActionResult> Details1(int? id)
+        public async Task<IActionResult> Details(int? id)
         {
             if(id == null)
             {
