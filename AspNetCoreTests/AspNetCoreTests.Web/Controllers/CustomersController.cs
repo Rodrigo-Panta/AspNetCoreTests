@@ -16,14 +16,14 @@ namespace AspNetCoreTests.Web.Controllers
             _customerService = customerService;
         }
 
-        public async Task<IActionResult> Index1()
+        public async Task<IActionResult> Index()
         {
             var customers = await _customerService.List();
 
             return View(customers);
         }
 
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details1(int? id)
         {
             if(id == null)
             {
