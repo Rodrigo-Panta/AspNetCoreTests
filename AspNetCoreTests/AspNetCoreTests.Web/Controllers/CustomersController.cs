@@ -16,7 +16,7 @@ namespace AspNetCoreTests.Web.Controllers
             _customerService = customerService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index1()
         {
             var customers = await _customerService.List();
 
